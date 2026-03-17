@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceFlow - AI Voice & Text Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🎙️</span>
+                <h1>VoiceFlow</h1>
+            </div>
+            <p class="subtitle">Real-time AI-powered translation</p>
+        </header>
+
+        <main class="translator-card">
+            <div class="controls-top">
+                <div class="input-header">
+                    <label for="language">Translate to:</label>
+                    <select id="language" class="styled-select">
+                        <option value="en">English (US)</option>
+                        <option value="ta">Tamil (தமிழ்)</option>
+                        <option value="hi">Hindi (हिन्दी)</option>
+                        <option value="es">Spanish (Español)</option>
+                        <option value="fr">French (Français)</option>
+                        <option value="de">German (Deutsch)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <div class="text-input-group">
+                    <input type="text" id="inputText" placeholder="Type or paste text..." autocomplete="off">
+                    <button class="btn btn-primary" onclick="translateTypedText()" id="translateBtn">
+                        <span class="btn-text">Translate</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+                
+                <div class="voice-section">
+                    <button class="btn btn-voice" onclick="startListening()" id="micBtn">
+                        <span class="mic-icon">🎤</span>
+                        <span>Tap to Speak</span>
+                    </button>
+                    <p class="hint">English is supported for voice input</p>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="result-box input-result">
+                    <div class="box-header">
+                        <span class="label">Original Text</span>
+                        <button class="icon-btn" onclick="readBox('speechText', this, 'en')" title="Listen">🔊</button>
+                    </div>
+                    <div class="content">
+                        <p id="speechText" class="placeholder-text">Your text will appear here...</p>
+                    </div>
+                </div>
+
+                <div class="result-box output-result">
+                    <div class="box-header">
+                        <span class="label">Translated Text</span>
+                        <button class="icon-btn" onclick="readBox('translatedText', this)" title="Listen">🔊</button>
+                    </div>
+                    <div class="content">
+                        <p id="translatedText" class="placeholder-text">Translation will appear here...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 VoiceFlow AI. Powered by MyMemory API.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
