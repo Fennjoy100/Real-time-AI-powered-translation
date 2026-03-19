@@ -5,7 +5,7 @@ A premium, responsive AI-powered translation dashboard built using HTML5, CSS3, 
 The purpose of this project is to demonstrate advanced front-end capabilities including the Web Speech API, asynchronous API handling, and modern CSS design systems.
 
 ## 🚀 Live Demo
-[Add your GitHub Pages Live Link Here]
+[fennjoy100.github.io/Real-time-AI-powered-translation/](https://fennjoy100.github.io/Real-time-AI-powered-translation/)
 
 ## 📌 Project Overview
 **VoiceFlow** is a dynamic translation tool that showcases:
@@ -85,4 +85,4 @@ Since this is a static HTML, CSS, and JavaScript project, no installation is req
 3. **Important**: Voice features work best when accessed via Chrome or Safari.
 
 ---
-*Created by [Your Name] – 2024*
+*Created by Fennjoy100 – 2026*
