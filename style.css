@@ -321,17 +321,129 @@ footer {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive */
-@media (max-width: 640px) {
-    .results-container {
-        grid-template-columns: 1fr;
+/* Responsive Design */
+
+/* PC / Large Screens (Default) */
+@media (min-width: 1200px) {
+    .app-container {
+        max-width: 1000px;
     }
-    
+}
+
+/* Tablets & Small Laptops (Tap vive) */
+@media screen and (max-width: 992px) {
+    .app-container {
+        max-width: 92% !important;
+        gap: 25px;
+    }
+
     .translator-card {
-        padding: 20px;
+        padding: 24px !important;
     }
-    
-    header h1 {
+
+    .results-container {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    .result-box {
+        min-height: 130px;
+    }
+}
+
+/* Mobile Devices (Mobile vive) */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .app-container {
+        gap: 15px;
+    }
+
+    header {
+        margin-bottom: 0;
+    }
+
+    .logo-icon {
         font-size: 2rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .translator-card {
+        padding: 16px;
+        border-radius: 20px;
+    }
+
+    /* Stack input and button on mobile */
+    .text-input-group {
+        display: flex !important;
+        flex-direction: column !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        gap: 12px;
+    }
+
+    #inputText {
+        background: rgba(15, 23, 42, 0.5) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 12px !important;
+        width: 100% !important;
+        padding: 16px !important;
+        font-size: 1rem;
+        flex: none !important;
+    }
+
+    .btn-primary {
+        width: 100% !important;
+        padding: 16px !important;
+        border-radius: 12px !important;
+        justify-content: center;
+    }
+
+    .btn-voice {
+        padding: 18px;
+        font-size: 1.1rem;
+    }
+
+    .input-header {
+        width: 100% !important;
+        justify-content: space-between;
+        padding: 10px 16px;
+    }
+
+    .result-box {
+        min-height: 100px;
+    }
+
+    #speechText, #translatedText {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding-top: 10px;
+    }
+}
+
+/* Ultra Small / Landscape */
+@media (max-height: 480px) {
+    body {
+        padding: 20px 10px;
     }
 }
